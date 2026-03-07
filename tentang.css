@@ -1,0 +1,157 @@
+/*bacground global halaman*/
+body{
+    background: #f8f5f2 ;
+}
+
+/*header section*/
+.about-header{
+    text-align: center;/*membuat text di tengah*/
+    padding: 120px 8% 80px;/*ukuran atas,kiri kanan,bawah*/
+    background: linear-gradient(180deg, #f3ece6,#ffffff);
+    animation: fadeDown 1.2s ease;/*animasi muncul dari atas*/
+}
+
+.about-header p{
+    margin-top: 15px;/*memberi jarak dari judul*/
+    font-size: 1.1rem;
+    color: #6b4f3a;
+}
+
+/*layout utama*/
+.about-section{
+    display: flex;/*kiri text,kanan gambar*/
+    justify-content: space-between;/*spasi text dan gambar*/
+    align-items: flex-start;/*konten rata di bagian atas*/
+    gap: 70px;
+    padding: 80px 8%;
+    background: #f3ece6;
+    animation: fadeUp 1.2s ease;
+}
+/*bagian text*/
+.about-content{
+    margin-top: 30px;
+    color: #4b3621;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.about-content h2 {
+    margin-top: 30px; /* jarak antar judul */
+    color: #4b3621;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+/* Garis dekoratif di bawah h2 */
+.about-content h2::after {
+    content: ""; /* membuat elemen kosong */
+    width: 60px; /* panjang garis */
+    height: 3px; /* ketebalan garis */
+    background: #c4a484; /* warna garis */
+    display: block;
+    margin-top: 8px;
+    
+}.about-content p {
+    margin-top: 15px;
+    line-height: 1.8; /* jarak antar baris */
+    font-size: 0.95rem;
+    color: #444;
+    text-align: justify; /* teks rata kiri kanan */
+}
+
+.about-content ul {
+    margin-top: 15px;
+    padding-left: 20px; /* jarak bullet dari kiri */
+}
+
+.about-content li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/*  BAGIAN GAMBAR (GRID) */
+.about-image {
+    flex: 6; /* lebar fleksibel */
+    min-width: 400px;
+}
+
+.about-image ul {
+    list-style: none; /* menghilangkan bullet */
+    display: grid; /* menggunakan sistem grid */
+    grid-template-columns: repeat(2, 1fr);/* membuat 2 kolom dengan ukuran sama */
+    gap: 18px; /* jarak antar gambar */
+}
+
+.about-image img {
+    width: 100%; /* gambar memenuhi kolom */
+    height: 280px;
+    object-fit: cover; /* gambar memenuhi grid */
+    border-radius: 14px;  /* sudut membulat */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);/* bayangan lembut */
+    transition: 0.4s ease;  /* animasi halus saat hover */
+}
+   
+
+/* Efek saat mouse diarahkan ke gambar */
+.about-image img:hover {
+    transform: scale(1.05);  /* gambar sedikit membesar */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);  /* bayangan lebih dalam */
+}
+/* ANIMASI */
+/* Animasi muncul dari atas */
+@keyframes fadeDown {
+    from {
+        opacity: 0; /* awalnya transparan */
+        transform: translateY(-40px); /* posisi dari atas */
+    }
+    to {
+        opacity: 1; /* menjadi terlihat */
+        transform: translateY(0);
+    }
+}
+
+/* Animasi muncul dari bawah */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px); /* posisi dari bawah */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*RESPONSIVE DESIGN*/
+/* Tablet */
+@media (max-width: 992px) {
+    .about-section {
+        flex-direction: column; /* layout berubah jadi vertikal */  
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .about-header {
+        padding: 100px 5% 60px;
+    }
+
+    .about-header h1 {
+        font-size: 2rem; /* mengecilkan judul */
+    }
+
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .about-image ul {
+        grid-template-columns: 1fr;/* gambar menjadi 1 kolom */
+        
+    }
+
+    .about-image img {
+        height: 180px;
+    }
+}

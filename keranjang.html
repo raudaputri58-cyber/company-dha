@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="keranjang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+        <div class="nav-logo"><img src="gambar/LOGO KOPI.png" alt=""></div>
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">Home</a></li>
+                <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+                <li><a href="produk.html" class="nav-link">Produk</a></li>
+                <li><a href="terbaru.html" class="nav-link">Terbaru</a></li>
+                <li><a href="promo.html" class="nav-link">Promo</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+        </div>
+
+
+    <!-- HEADER -->
+    <section class="cart-header">
+        <h1>Keranjang Belanja</h1>
+        <p>Produk yang kamu pilih akan muncul di sini</p>
+    </section>
+
+
+    <!-- ISI KERANJANG -->
+    <section class="cart-container">
+
+        <div class="cart-item">
+
+            <img src="gambar/produk5 mocah.jpg" alt="coffee mocah">
+
+            <div class="cart-info">
+                <h3>Kopi Arabika Bajawa</h3>
+                <p>250gr</p>
+                <span class="price">Rp 85.000</span>
+            </div>
+
+            <div class="cart-qty">
+                <input type="number" value="1" min="1">
+            </div>
+
+            <div class="cart-remove">
+                <i class="fas fa-trash"></i>
+            </div>
+
+        </div>
+
+
+        <!-- TOTAL -->
+        <div class="cart-summary">
+            <h2>Total</h2>
+            <p>Rp 85.000</p>
+
+            <a href="kontak.html" class="checkout-btn">
+                Checkout
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-text">
+                &copy; 2026 <span>Coffee Bajawa</span>. Kenikmatan dari secangkir kopi Bajawa.
+            </div>
+
+            <div class="footer-contact">
+                <a href="https://wa.me/085338372571" target="_blank">
+                    <img src="gambar/whatsapp.png" alt="WhatsApp">
+                </a>
+
+                <a href="https://instagram.com/dha_tyyy07" target="_blank">
+                    <img src="gambar/instagram.png" alt="Instagram">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

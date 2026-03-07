@@ -1,0 +1,175 @@
+/* HERO SECTION  */
+.hero {
+    height: 100vh; /* LAYAR PENUH */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* hero content kiri, gambar kanan */
+    padding: 0 8%;
+    background-color: #f3ece6; /* cream lembut */
+}
+
+/*  HERO IMAGE  */
+.hero-image img {
+    width: 500px; /* lebar gambar */
+    height: auto; /* tinggi menyesuaikan proporsi gambar */
+    clip-path: ellipse(75% 85% at 50% 50%); /* membentuk gambar seperti ellipse */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* bayangan lembut di bawah gambar */
+    border-radius: 15px;
+    /* animasi */
+    animation: float 4s ease-in-out infinite alternate;
+    /*
+        float       : nama keyframes animasi
+        4s          : durasi 4 detik
+        ease-in-out : gerakan halus saat mulai dan berhenti
+        infinite    : animasi terus berulang tanpa berhenti
+        alternate   : animasi bolak-balik
+    */
+}
+
+/* KEYFRAMES ANIMASI  */
+@keyframes float {
+    from {
+        transform: translateY(0) scale(1);
+        /* translateY(0) : posisi awal vertikal */
+        /* scale(1) : ukuran normal */
+    }
+    to {
+        transform: translateY(-20px) scale(1.05);
+        /* translateY(-20px) : gambar naik 20px ke atas */
+        /* scale(1.05) : memperbesar gambar 5% */
+    }
+}
+
+/* Konten hero (judul, deskripsi, tombol) */
+.hero-content {
+    max-width: 500px;
+    color: #1e1103; /* teks coklat gelap */
+    animation: fadeIn 1.5s ease-in-out; /* animasi saat load */
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* shadow halus */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9; /* sedikit transparan */
+}
+
+/* Animasi fadeIn di text*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* slide dari bawah */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tombol beli sekarang */
+.btn-shop {
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: #c4a484; /* coklat hangat */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px; /* bentuk lonjong capsule */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s ease; /* efek halus */
+}
+
+.btn-shop:hover {
+    background-color: #4b3621;
+    transform: translateY(-4px); /* sedikit naik saat hover */
+}
+
+/* RESPONSIVE IMPROVEMENT ALL SCREEN SIZE */
+
+/* Large Desktop (Layar Besar 1400px ke atas) */
+@media (min-width: 1400px){
+
+    .hero,
+    .nav-container,
+    .footer{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .hero-content h1{
+        font-size: 3.5rem;
+    }
+
+    .hero-image img{
+        width: 600px;
+    }
+}
+
+/* Laptop / Tablet Landscape */
+@media (max-width: 1200px){
+
+    .hero{
+        gap: 40px;
+    }
+
+    .hero-image img{
+        width: 420px;
+    }
+
+    .hero-content h1{
+        font-size: 2.6rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px){
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 60px 8%;
+        gap: 30px;
+    }
+
+    .hero-content{
+        max-width: 100%;
+    }
+
+    .hero-image img{
+        width: 350px;
+    }
+
+    .nav-logo img{
+        height: 150px;
+    }
+}
+
+/* Mobile Besar */
+@media (max-width: 768px){
+
+    .nav-container{
+        padding: 12px 5%;
+    }
+
+    .nav-logo img{
+        height: 90px;
+    }
+
+    .nav-menu{
+        gap: 15px;
+    }
+
+    .nav-link{
+        font-size: 0.85rem;
+    }
+
+    .cart-icon{
+        font-size: 18px;
+    }
+}
