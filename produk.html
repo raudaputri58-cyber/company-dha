@@ -1,241 +1,274 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>produk</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="produk.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>produk</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="produk.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+    <!-- ================= NAVBAR ================= -->
     <nav class="navbar">
         <div class="nav-container">
-        <div class="nav-logo"><img src="gambar/LOGO KOPI.png" alt=""></div>
+            <div class="nav-logo">
+                <img src="gambar/LK2.png" alt="Logo Coffee Bajawa">
+            </div>
 
+            <!-- CHECKBOX -->
+                <input type="checkbox" id="menu-toggle"> 
+
+            <!-- MENU -->
             <ul class="nav-menu">
-                <li><a href="about.html" class="nav-link">Home</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="tentang.html" class="nav-link">Tentang</a></li>
                 <li><a href="produk.html" class="nav-link">Produk</a></li>
-                <li><a href="terbaru.html" class="nav-link">Terbaru</a></li>
-                <li><a href="promo.html" class="nav-link">Promo</a></li>
                 <li><a href="kontak.html" class="nav-link">Kontak</a></li>
             </ul>
 
-            <div class="nav-cart">
-                <a href="keranjang.html" class="cart-icon">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-badge">
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+
+                <!-- CART -->
+                <div class="nav-cart">
+                    <a href="keranjang.html">
                         <i class="fas fa-shopping-cart"></i>
-                    </span> 
-                </a>
+                    </a>
+                </div>
+
+                <div class="nav-search">
+                    <input type="text" placeholder="Cari produk...">
+                    <button>🔍</button>
+                </div>
+                
+                <!-- HAMBURGER -->
+                <label for="menu-toggle" class="menu-icon">☰</label>
+
             </div>
 
         </div>
     </nav>
-    
-    <section class="produk-header">
-        <h1>Produk Arabika Bajawa</h1>
-        <p>Nikmati cita rasa khas pengunungan Bajawa yang lembut dan beraroma kuat. </p>
-    </section>
+        <section class="produk-header">
+            <h1>Produk Arabika Bajawa</h1>
+            <p>Nikmati cita rasa khas pengunungan Bajawa yang lembut dan beraroma kuat. </p>
+        </section>
 
-    <!--grid produk-->
-    <section class="produk-container">
-        <div class="card">
-            <div class="card-img">
-                <img src="gambar/produk1 cup.png" alt="coffee latte">
-            </div>
-            <div class="card-content">
-                <h3>Arabika Coffee Latte</h3>
-                <p>Coffee latte terbuat dari perpaduan espresso (kopi konsentrat) dan susu kukus (steamed milk)</p>
-                <span>Rp 40.000</span>
-
-                <div class="button-group">
-                    <a href="#" class="btn">Beli Sekarang</a>
-                    <!--keranjang-->
-                    <input type="checkbox" id="cart1" class="cart-check">
-                    <label for="cart1" class="btn btn-cart">
-                        <span class="text-default">Tambah Keranjang</span>
-                        <span class="text-added">✔ Ditambahkan</span>
-                    </label>
+        <!--grid produk-->
+        <section class="produk-container">
+            <div class="card">
+                <div class="card-img">
+                    <img src="gambar/produk1 cup.png" alt="coffee latte">
                 </div>
+                <div class="card-content">
+                    <h3>Arabika Coffee Latte</h3>
+                    <p>Coffee latte terbuat dari perpaduan espresso (kopi konsentrat) dan susu kukus (steamed milk)</p>
+                    <span>Rp 40.000</span>
 
-            </div>
-        </div>
+                    <div class="button-group">
+                        <a href="#" class="btn">Beli Sekarang</a>
+                        <!--keranjang-->
+                        <input type="checkbox" id="cart1" class="cart-check">
+                        <label for="cart1" class="btn btn-cart">
+                            <span class="text-default">Tambah Keranjang</span>
+                            <span class="text-added">✔ Ditambahkan</span>
+                        </label>
+                    </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="gambar/produk8 bubuk.jpg" alt="coffee latte">
-            </div>
-            <div class="card-content">
-                <h3>Arabika bubuk </h3>
-                <p> terbuat dari kopi arabika asli  yang digiling dengan halus lalu dikemas </p>
-                <span>Rp 27.500</span>
-
-                <div class="button-group">
-                    <a href="#" class="btn">Beli Sekarang</a>
-                    <!--keranjang-->
-                    <input type="checkbox" id="cart2" class="cart-check">
-                    <label for="cart2" class="btn btn-cart">
-                        <span class="text-default">Tambah Keranjang</span>
-                        <span class="text-added">✔ Ditambahkan</span>
-                    </label>
-                </div>
-            </div>    
-            
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="gambar/produk7 bubuk.jpg" alt="coffee latte">
-            </div>
-            <div class="card-content">
-                <h3>(New)Arabika bubbuk</h3>
-                <p>terbuat dari kopi arabika asli  yang digiling dengan halus lalu dikemas dengan farian baru  </p>
-                <span>Rp 30.000</span>
-
-                <div class="button-group">
-                    <a href="#" class="btn">Beli Sekarang</a>
-                    <!--keranjang-->
-                    <input type="checkbox" id="cart3" class="cart-check">
-                    <label for="cart3" class="btn btn-cart">
-                        <span class="text-default">Tambah Keranjang</span>
-                        <span class="text-added">✔ Ditambahkan</span>
-                    </label>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="gambar/produk2 hitam.webp" alt="kopi hitam">
-            </div>
-            <div class="card-content">
-                <h3>Arabika hitam</h3>
-                <p>Terbuat dari seduhan biji kopi panggang yang digiling dan dicampur air panas tanpa tambahan susu, krim, atau gula</p>
-                <span>Rp 45.000</span>
-
-                <div class="button-group">
-                    <a href="#" class="btn">Beli Sekarang</a>
-                    <!--keranjang-->
-                    <input type="checkbox" id="cart4" class="cart-check">
-                    <label for="cart4" class="btn btn-cart">
-                        <span class="text-default">Tambah Keranjang</span>
-                        <span class="text-added">✔ Ditambahkan</span>
-                    </label>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-img">
-                <img src="gambar/produk3 espreso gulmer.jpg" alt="espreso coffee">
-            </div>
-            <div class="card-content">
-                <h3>Espreso coffee gulmer</h3>
-                <p>Espreso coffee terbuat dari  biji kopi yang digiling halus dan diseduh dengan air panas dan gula merah </p>
-                <span>Rp 40.000</span>
-
-                <div class="button-group">
-                    <a href="#" class="btn">Beli Sekarang</a>
-                    <!--keranjang-->
-                    <input type="checkbox" id="cart5" class="cart-check">
-                    <label for="cart5" class="btn btn-cart">
-                        <span class="text-default">Tambah Keranjang</span>
-                        <span class="text-added">✔ Ditambahkan</span>
-                    </label>
                 </div>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="gambar/produk4 capucino.jpg" alt="cappucino">
-            </div>
-            <div class="card-content">
-                <h3>cappucino</h3>
-                <p>cappucino terbuat dari perpaduan antara tiga koponen yaitu espresso,susu kukus,dan busa kukus</p>
-                <span>Rp 60.000</span>
-
-                <div class="button-group">
-                    <a href="#" class="btn">Beli Sekarang</a>
-                    <!--keranjang-->
-                    <input type="checkbox" id="cart6" class="cart-check">
-                    <label for="cart6" class="btn btn-cart">
-                        <span class="text-default">Tambah Keranjang</span>
-                        <span class="text-added">✔ Ditambahkan</span>
-                    </label>
+            <div class="card">
+                <div class="card-img">
+                    <img src="gambar/produk8 bubuk.jpg" alt="coffee latte">
                 </div>
+                <div class="card-content">
+                    <h3>Arabika bubuk </h3>
+                    <p> terbuat dari kopi arabika asli  yang digiling dengan halus lalu dikemas </p>
+                    <span>Rp 27.500</span>
 
+                    <div class="button-group">
+                        <a href="#" class="btn">Beli Sekarang</a>
+                        <!--keranjang-->
+                        <input type="checkbox" id="cart2" class="cart-check">
+                        <label for="cart2" class="btn btn-cart">
+                            <span class="text-default">Tambah Keranjang</span>
+                            <span class="text-added">✔ Ditambahkan</span>
+                        </label>
+                    </div>
+                </div>    
+                
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="gambar/mocha.webp" alt="mocha">
-            </div>
-            <div class="card-content">
-                <h3>coffee mocha</h3>
-                <p>Coffee mocha adalah minuman kopi berbasis espresso yang diracik dari campuran espresso, susu kukus (steamed milk), dan cokelat (bubuk kakao, sirup, atau lelehan)</p>
-                <span>Rp 65.000</span>
-
-                <div class="button-group">
-                    <a href="#" class="btn">Beli Sekarang</a>
-                    <!--keranjang-->
-                    <input type="checkbox" id="cart7" class="cart-check">
-                    <label for="cart7" class="btn btn-cart">
-                        <span class="text-default">Tambah Keranjang</span>
-                        <span class="text-added">✔ Ditambahkan</span>
-                    </label>
+            <div class="card">
+                <div class="card-img">
+                    <img src="gambar/produk7 bubuk.jpg" alt="coffee latte">
                 </div>
+                <div class="card-content">
+                    <h3>(New)Arabika bubbuk</h3>
+                    <p>terbuat dari kopi arabika asli  yang digiling dengan halus lalu dikemas dengan farian baru  </p>
+                    <span>Rp 30.000</span>
 
-            </div>
-        </div>
+                    <div class="button-group">
+                        <a href="#" class="btn">Beli Sekarang</a>
+                        <!--keranjang-->
+                        <input type="checkbox" id="cart3" class="cart-check">
+                        <label for="cart3" class="btn btn-cart">
+                            <span class="text-default">Tambah Keranjang</span>
+                            <span class="text-added">✔ Ditambahkan</span>
+                        </label>
+                    </div>
 
-        <div class="card">
-            <div class="card-img">
-                <img src="gambar/produk6 cortodho.jpg" alt="coffee latte">
-            </div>
-            <div class="card-content">
-                <h3>coffee cortodho</h3>
-                <p>Coffee cortado terbuat dari campuran espresso dan susu kukus (steamed milk)</p>
-                <span>Rp 68.500</span>
-
-                <div class="button-group">
-                    <a href="#" class="btn">Beli Sekarang</a>
-                    <!--keranjang-->
-                    <input type="checkbox" id="cart8" class="cart-check">
-                    <label for="cart8" class="btn btn-cart">
-                        <span class="text-default">Tambah Keranjang</span>
-                        <span class="text-added">✔ Ditambahkan</span>
-                    </label>
                 </div>
-
             </div>
-        </div>
-    </section>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="gambar/produk2 hitam.webp" alt="kopi hitam">
+                </div>
+                <div class="card-content">
+                    <h3>Arabika hitam</h3>
+                    <p>Terbuat dari seduhan biji kopi panggang yang digiling dan dicampur air panas tanpa tambahan susu, krim, atau gula</p>
+                    <span>Rp 45.000</span>
+
+                    <div class="button-group">
+                        <a href="#" class="btn">Beli Sekarang</a>
+                        <!--keranjang-->
+                        <input type="checkbox" id="cart4" class="cart-check">
+                        <label for="cart4" class="btn btn-cart">
+                            <span class="text-default">Tambah Keranjang</span>
+                            <span class="text-added">✔ Ditambahkan</span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="gambar/produk3 espreso gulmer.jpg" alt="espreso coffee">
+                </div>
+                <div class="card-content">
+                    <h3>Espreso coffee gulmer</h3>
+                    <p>Espreso coffee terbuat dari  biji kopi yang digiling halus dan diseduh dengan air panas dan gula merah </p>
+                    <span>Rp 40.000</span>
+
+                    <div class="button-group">
+                        <a href="#" class="btn">Beli Sekarang</a>
+                        <!--keranjang-->
+                        <input type="checkbox" id="cart5" class="cart-check">
+                        <label for="cart5" class="btn btn-cart">
+                            <span class="text-default">Tambah Keranjang</span>
+                            <span class="text-added">✔ Ditambahkan</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="gambar/produk4 capucino.jpg" alt="cappucino">
+                </div>
+                <div class="card-content">
+                    <h3>cappucino</h3>
+                    <p>cappucino terbuat dari perpaduan antara tiga koponen yaitu espresso,susu kukus,dan busa kukus</p>
+                    <span>Rp 60.000</span>
+
+                    <div class="button-group">
+                        <a href="#" class="btn">Beli Sekarang</a>
+                        <!--keranjang-->
+                        <input type="checkbox" id="cart6" class="cart-check">
+                        <label for="cart6" class="btn btn-cart">
+                            <span class="text-default">Tambah Keranjang</span>
+                            <span class="text-added">✔ Ditambahkan</span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="gambar/mocha.webp" alt="mocha">
+                </div>
+                <div class="card-content">
+                    <h3>coffee mocha</h3>
+                    <p>Coffee mocha adalah minuman kopi berbasis espresso yang diracik dari campuran espresso, susu kukus (steamed milk), dan cokelat (bubuk kakao, sirup, atau lelehan)</p>
+                    <span>Rp 65.000</span>
+
+                    <div class="button-group">
+                        <a href="#" class="btn">Beli Sekarang</a>
+                        <!--keranjang-->
+                        <input type="checkbox" id="cart7" class="cart-check">
+                        <label for="cart7" class="btn btn-cart">
+                            <span class="text-default">Tambah Keranjang</span>
+                            <span class="text-added">✔ Ditambahkan</span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="gambar/produk6 cortodho.jpg" alt="coffee latte">
+                </div>
+                <div class="card-content">
+                    <h3>coffee cortodho</h3>
+                    <p>Coffee cortado terbuat dari campuran espresso dan susu kukus (steamed milk)</p>
+                    <span>Rp 68.500</span>
+
+                    <div class="button-group">
+                        <a href="#" class="btn">Beli Sekarang</a>
+                        <!--keranjang-->
+                        <input type="checkbox" id="cart8" class="cart-check">
+                        <label for="cart8" class="btn btn-cart">
+                            <span class="text-default">Tambah Keranjang</span>
+                            <span class="text-added">✔ Ditambahkan</span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+ <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">
-            <!-- Teks Footer -->
-            <div class="footer-text">
-                &copy; 2026 <span>Coffee Bajawa</span>. Kenikmatan dari secangkir kopi Bajawa.
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <h2>Coffee Bajawa</h2>
+                <p>Kopi arabika asli dari dataran tinggi Bajawa dengan aroma khas dan rasa yang nikmat.</p>
             </div>
-            <!-- Hubungi WA & IG -->
+
+            <!-- NAV FOOTER -->
+            <div class="footer-nav">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="promo.html">Promo</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+
+            <!-- KONTAK -->
             <div class="footer-contact">
-                <p>hubungi kami di bawah ini :</p><br>
+                <h3>Kontak</h3>
+                <p>Email: coffeebajawa@gmail.com</p>
+                <p>Telp: 0853 3837 2571</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/6285338372571?text=Halo%20Coffee%20Bajawa,%20saya%20ingin%20bertanya/"target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/dha_tyyy07/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
 
-                <a href="https://wa.me/085338372571" target="_blank">
-                    <img src="gambar/whatsapp.png" alt="WhatsApp" />
-                </a>
-                <a href="https://instagram.com/dha_tyyy07" target="_blank">
-                    <img src="gambar/instagram.png" alt="Instagram" />
-                </a>
-
-            </div>   
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>© 2026 Coffee Bajawa | All Rights Reserved</p>
         </div>
     </footer>
-    
+
 </body>
 </html>

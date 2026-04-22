@@ -1,323 +1,287 @@
-/* KESELURUHAN */
-/* Mengatur margin, padding, box-sizing, dan font default */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', serif;
-}
-
-/* Judul H2 */
-h2{
-    text-align: center; /* teks berada di tengah */
-    color: #1e1103;     /* warna coklat gelap */
-    margin-top: 70px;   /* jarak atas dari elemen sebelumnya */
-}
-
-/*NAVBAR */
-/* Container utama navbar */
-.nav-container{
-    display: flex; /* membuat konten sejajar horizontal */
-    justify-content: space-between; /* logo kiri, menu kanan */
-    align-items: center; /* rata tengah vertikal */
-    padding: 15px 8%;
-    background-color: rgba(171, 121, 86, 0.902); /* coklat transparan */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* efek bayangan */
-    position: sticky; /* tetap di atas saat scroll */
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #cdb295;
+    height: 80px;
+    padding: 0 5%;
+    position: sticky;
     top: 0;
-    z-index: 1000; /* agar selalu di depan konten lain */
+    z-index: 1000; /* supaya navbar selalu di atas */
 }
 
-/* Logo navbar */
-.nav-logo img{
-    height: 190px; /* tinggi logo */
-    display: block;
+/* Container navbar */
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo di kiri, menu di kanan */
+    position: relative; /* untuk dropdown menu mobile */
 }
 
-/* Menu navigasi */
-.nav-menu{
-    display: flex; /* menampilkan item secara horizontal */
-    list-style: none; /* hilangkan bullet list */
-    gap: 30px; /* jarak antar menu */
+/* Logo */
+.nav-logo img {
+    height: 75px;
+}
+
+/* Menu desktop */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    z-index: 999; /* supaya di atas konten lain */
 }
 
 /* Link menu */
-.nav-link{
-    text-decoration: none; /* hilangkan garis bawah */
-    color: #4b3621; /* coklat gelap */
+.nav-link {
+    text-decoration: none;
+    color: #3d2a1f;
     font-weight: 600;
-    font-size: 1rem;
-    transition: 0.3s ease; /* efek halus saat hover */
 }
 
-.nav-link:hover{
-    color: #c4a484; /* ganti warna saat hover */
+/* Cart icon */
+.nav-cart i {
+    font-size: 20px;
+    color: #3d2a1f;
 }
-
-/* Ikon keranjang */
-.cart-icon{
-    color: #4b3621;
-    font-size: 24px;
-    text-decoration: none;
-    transition: 0.3s ease; /* efek halus saat hover */
-}
-
-.cart-icon:hover{
-    color: #c4a484;
-}
-
-/* HERO SECTION  */
-.hero {
-    height: 100vh; /* LAYAR PENUH */
+.nav-right {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* hero content kiri, gambar kanan */
-    padding: 0 8%;
-    background-color: #f3ece6; /* cream lembut */
+    gap: 15px;
 }
 
-/*  HERO IMAGE  */
-.hero-image img {
-    width: 500px; /* lebar gambar */
-    height: auto; /* tinggi menyesuaikan proporsi gambar */
-    clip-path: ellipse(75% 85% at 50% 50%); /* membentuk gambar seperti ellipse */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* bayangan lembut di bawah gambar */
-    
-    /* animasi */
-    animation: float 4s ease-in-out infinite alternate;
-    /*
-        float       : nama keyframes animasi
-        4s          : durasi 4 detik
-        ease-in-out : gerakan halus saat mulai dan berhenti
-        infinite    : animasi terus berulang tanpa berhenti
-        alternate   : animasi bolak-balik
-    */
+/* Hamburger menu (hidden desktop) */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
 }
 
-/* KEYFRAMES ANIMASI  */
-@keyframes float {
-    from {
-        transform: translateY(0) scale(1);
-        /* translateY(0) : posisi awal vertikal */
-        /* scale(1) : ukuran normal */
-    }
-    to {
-        transform: translateY(-20px) scale(1.05);
-        /* translateY(-20px) : gambar naik 20px ke atas */
-        /* scale(1.05) : memperbesar gambar 5% */
-    }
+/* Checkbox untuk toggle menu mobile */
+#menu-toggle {
+    display: none;
 }
 
-/* Konten hero (judul, deskripsi, tombol) */
-.hero-content {
-    max-width: 500px;
-    color: #1e1103; /* teks coklat gelap */
-    animation: fadeIn 1.5s ease-in-out; /* animasi saat load */
+/* ================= SEARCH NAVBAR ================= */
+.nav-search {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
 }
 
-.hero-content h1 {
-    font-size: 3.2rem;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* shadow halus */
+.nav-search input {
+    border: none;
+    outline: none;
+    padding: 5px 8px;
+    font-size: 14px;
+    width: 140px;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9; /* sedikit transparan */
+.nav-search button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-/* Animasi fadeIn di text*/
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* slide dari bawah */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.nav-search:focus-within {
+    border-color: #b67a45;
+    box-shadow: 0 0 5px rgba(182, 122, 69, 0.3);
 }
 
-/* Tombol beli sekarang */
-.btn-shop {
-    display: inline-block;
-    padding: 14px 40px;
-    background-color: #c4a484; /* coklat hangat */
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px; /* bentuk lonjong capsule */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: 0.3s ease; /* efek halus */
-}
-
-.btn-shop:hover {
-    background-color: #4b3621;
-    transform: translateY(-4px); /* sedikit naik saat hover */
-}
-
-/*  FOOTER */
+/* ================= FOOTER ================= */
 .footer {
-    background-color: #4b3621; /* coklat gelap */
-    color: #f3ece6; /* teks cream */
-    padding: 40px 8%;
+    background: #3d2a1f;
+    color: white;
+    padding: 60px 5% 20px;
 }
 
-.footer-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* responsive */
-    gap: 20px;
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
-.footer-text{
-    font-size: 0.95rem;
+/* Brand */
+.footer-brand h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #ddd;
     line-height: 1.6;
+    font-size: 14px;
 }
 
-.footer-text span{
-    font-weight: bold;
-    color: #c4a484; /* highlight nama brand */
+/* Footer navigation */
+.footer-nav h3 {
+    margin-bottom: 15px;
 }
 
-/* Kontak WA & IG */
-.footer-contact a{
-    margin-left: 15px;
-    transition: transform 0.3s ease;
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav li {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #b67a45;
+}
+
+/* Footer kontak & social */
+.footer-contact h3 {
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ddd;
+}
+
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social a {
     display: inline-block;
+    margin-right: 12px;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
 }
 
-.footer-contact img{
-    width: 30px;
-    height: 30px;
+.footer-social a:hover {
+    color: #b67a45;
+    transform: translateY(-3px);
 }
 
-.footer-contact a:hover img{
-    transform: scale(1.1);
+/* Footer copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* RESPONSIVE IMPROVEMENT ALL SCREEN SIZE */
-
-/* Large Desktop (Layar Besar 1400px ke atas) */
-@media (min-width: 1400px){
-
-    .hero,
-    .nav-container,
-    .footer{
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-
-    .hero-content h1{
-        font-size: 3.5rem;
-    }
-
-    .hero-image img{
-        width: 600px;
-    }
+.footer-bottom p {
+    font-size: 13px;
+    color: #ccc;
 }
 
-/* Laptop / Tablet Landscape */
-@media (max-width: 1200px){
+/* ================= RESPONSIVE ================= */
 
-    .hero{
-        gap: 40px;
-    }
-
-    .hero-image img{
-        width: 420px;
-    }
-
-    .hero-content h1{
-        font-size: 2.6rem;
+/* Tablet & Mobile */
+@media (max-width: 1024px) {
+    .cart-container {
+        max-width: 90%;
     }
 }
 
-/* Tablet */
-@media (max-width: 992px){
+/* Mobile */
+@media (max-width: 768px) {
+    /* Navbar hamburger */
+    .menu-icon {
+        display: block;
+    }
 
-    .hero{
+    /* Menu jadi dropdown */
+    .nav-menu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #cdb295;
         flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding: 60px 8%;
-        gap: 30px;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
     }
 
-    .hero-content{
-        max-width: 100%;
+    /* Menu aktif */
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
     }
 
-    .hero-image img{
-        width: 350px;
+    /* Kontainer kontak/keranjang full width */
+    .kontak-container,
+    .cart-container {
+        max-width: 95%;
+        padding: 15px;
     }
 
-    .nav-logo img{
-        height: 150px;
+    /* Cart layout vertical */
+    .cart-content {
+        flex-direction: column;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        border: none;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .cart-item img {
+        width: 100%;
+        height: 140px;
+    }
+
+    .item-total {
+        width: 100%;
+        text-align: right;
+        margin-top: 10px;
+    }
+
+    .qty {
+        margin-top: 5px;
+    }
+
+    /* Ringkasan checkout full width */
+    .cart-summary,
+    .checkout-summary {
+        width: 100%;
     }
 }
 
-/* Mobile Besar */
-@media (max-width: 768px){
-
-    .nav-container{
-        padding: 12px 5%;
+/* Small mobile */
+@media (max-width: 480px) {
+    .cart-container {
+        padding: 12px;
     }
 
-    .nav-logo img{
-        height: 90px;
+    .cart-item img {
+        height: 120px;
     }
 
-    .nav-menu{
-        gap: 15px;
+    .item-info h3 {
+        font-size: 14px;
     }
 
-    .nav-link{
-        font-size: 0.85rem;
+    .item-info p {
+        font-size: 12px;
     }
 
-    .cart-icon{
-        font-size: 18px;
-    }
-}
-
-/* Mobile Kecil */
-@media (max-width: 480px){
-
-    h2{
-        margin-top: 50px;
-        font-size: 1.4rem;
-    }
-
-    .hero{
-        padding: 40px 5%;
-    }
-
-    .hero-content h1{
-        font-size: 1.8rem;
-        line-height: 1.3;
-    }
-
-    .hero-content p{
-        font-size: 0.9rem;
-    }
-
-    .hero-image img{
-        width: 230px;
-    }
-
-    .btn-shop{
-        padding: 10px 22px;
-        font-size: 0.8rem;
-    }
-
-    .footer-text{
-        font-size: 0.85rem;
-    }
-
-    .footer-container{
-        gap: 15px;
+    .checkout-btn {
+        padding: 10px;
+        font-size: 13px;
     }
 }

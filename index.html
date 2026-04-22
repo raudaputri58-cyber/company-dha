@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Bajawa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- LOGO -->
+            <div class="nav-logo">
+                <img src="gambar/LK2.png" alt="Logo Coffee Bajawa">
+            </div>
+
+            <!-- CHECKBOX MOBILE -->
+            <input type="checkbox" id="menu-toggle">
+
+            <!-- MENU NAV -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+                <li><a href="produk.html" class="nav-link">Produk</a></li>
+                <li><a href="#terbaru" class="nav-link">Terbaru</a></li>
+                <li><a href="#promo" class="nav-link">Promo</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+                <!-- CART ICON -->
+                <div class="nav-cart">
+                    <a href="keranjang.html">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <!-- SEARCH -->
+                <div class="nav-search">
+                    <input type="text" placeholder="Cari produk...">
+                    <button>🔍</button>
+                </div>
+
+                <!-- HAMBURGER -->
+                <label for="menu-toggle" class="menu-icon">☰</label>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>ARABIKA DARI BAJAWA</h1>
+                <p>Rasakan kehangatan tanah Bajawa. Permata tersembunyi dari Timur Indonesia.</p>
+                <a href="produk.html" class="hero-btn">Order Coffee</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FITUR ================= -->
+    <section class="fitur">
+        <div class="fitur-container">
+            <div class="fitur-box">
+                <i class="fas fa-seedling"></i>
+                <h3>Kopi Organik</h3>
+                <p>Kopi alami dari dataran tinggi Bajawa.</p>
+            </div>
+            <div class="fitur-box">
+                <i class="fas fa-mug-hot"></i>
+                <h3>Aroma Premium</h3>
+                <p>Aroma kopi yang kuat dan nikmat.</p>
+            </div>
+            <div class="fitur-box">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Pengiriman Cepat</h3>
+                <p>Pesanan dikirim cepat dan aman.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROMO ================= -->
+    <section class="flash-sale" id="promo">
+        <div class="flash-container">
+            <!-- HEADER -->
+            <div class="flash-header">
+                <div class="flash-title">
+                    <h2>Flash Sale</h2>
+                    <span class="badge-sale">HOT</span>
+                </div>
+                <div class="timer-box">
+                    <span class="timer-label">Berakhir dalam</span>
+                    <div class="timer">
+                        <div class="time">00</div><span>:</span>
+                        <div class="time">00</div><span>:</span>
+                        <div class="time">00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDER PRODUK -->
+            <div class="scroll-x">
+                <!-- CARD 1 -->
+                <div class="flash-card">
+                    <div class="flash-img">
+                        <img src="gambar/produk2 hitam.webp">
+                        <span class="diskon">-50%</span>
+                    </div>
+                    <div class="flash-body">
+                        <h3>Arabica Hitam</h3>
+                        <p class="harga">Rp31.500</p>
+                        <div class="stok-bar">
+                            <div class="stok" style="width:70%"></div>
+                        </div>
+                        <button>Beli</button>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="flash-card">
+                    <div class="flash-img">
+                        <img src="gambar/produk4 capucino.jpg">
+                        <span class="diskon">-30%</span>
+                    </div>
+                    <div class="flash-body">
+                        <h3>Capucino</h3>
+                        <p class="harga">Rp30.000</p>
+                        <div class="stok-bar">
+                            <div class="stok" style="width:60%"></div>
+                        </div>
+                        <button>Beli</button>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="flash-card">
+                    <div class="flash-img">
+                        <img src="gambar/produk8 bubuk.jpg">
+                        <span class="diskon">-7%</span>
+                    </div>
+                    <div class="flash-body">
+                        <h3>Arabica bubuk</h3>
+                        <p class="harga">Rp20.000</p>
+                        <div class="stok-bar">
+                            <div class="stok" style="width:80%"></div>
+                        </div>
+                        <button>Beli</button>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="flash-card">
+                    <div class="flash-img">
+                        <img src="gambar/produk1 cup.png">
+                        <span class="diskon">-5%</span>
+                    </div>
+                    <div class="flash-body">
+                        <h3>Arabica Coffee Latte</h3>
+                        <p class="harga">Rp35.000</p>
+                        <div class="stok-bar">
+                            <div class="stok" style="width:80%"></div>
+                        </div>
+                        <button>Beli</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRODUK ================= -->
+    <section class="produk" id="terbaru">
+        <h2>Produk Terlaris</h2>
+        <div class="produk-container scroll-produk">
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="gambar/produk3 espreso gulmer.jpg">
+                    <span class="label-top">TOP</span>
+                </div>
+                <h3>Espreso gulmer</h3>
+                <p>Rp 40.000 #Harga asli</p>
+                <button>Beli</button>
+            </div>
+
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="gambar/produk5 mocah.jpg">
+                    <span class="label-top">TOP</span>
+                </div>
+                <h3>Coffee Mocah</h3>
+                <p>Rp 65.000 #Harga asli</p>
+                <button>Beli</button>
+            </div>
+
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="gambar/produk6 cortodho.jpg">
+                    <span class="label-top">TOP</span>
+                </div>
+                <h3>COffee Cortodho</h3>
+                <p>Rp 68.000 #Harga asli</p>
+                <button>Beli</button>
+            </div>
+
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="gambar/produk7 bubuk.jpg">
+                    <span class="label-top">TOP</span>
+                </div>
+                <h3>New Arabika Bubuk</h3>
+                <p>Rp 30.000 #Harga asli</p>
+                <button>Beli</button>
+            </div>
+
+            <div class="produk-card">
+                <div class="produk-img">
+                    <img src="gambar/produk1 cup.png">
+                    <span class="label-top">TOP</span>
+                </div>
+                <h3>Arabika Coffee Latte</h3>
+                <p>Rp 40.000 #Harga asli</p>
+                <button>Beli</button>
+            </div>
+        </div>
+    </section>
+
+ <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <h2>Coffee Bajawa</h2>
+                <p>Kopi arabika asli dari dataran tinggi Bajawa dengan aroma khas dan rasa yang nikmat.</p>
+            </div>
+
+            <!-- NAV FOOTER -->
+            <div class="footer-nav">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="promo.html">Promo</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+
+            <!-- KONTAK -->
+            <div class="footer-contact">
+                <h3>Kontak</h3>
+                <p>Email: coffeebajawa@gmail.com</p>
+                <p>Telp: 0853 3837 2571</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/6285338372571?text=Halo%20Coffee%20Bajawa,%20saya%20ingin%20bertanya/"target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/dha_tyyy07/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>© 2026 Coffee Bajawa | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

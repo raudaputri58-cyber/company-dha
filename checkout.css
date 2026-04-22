@@ -1,0 +1,98 @@
+
+/* ================= CONTAINER ================= */
+
+.checkout{
+    padding:50px 20px; /* jarak dalam (atas-bawah 50px, kiri-kanan 20px) */
+}
+
+.checkout-container{
+    max-width:1000px; /* batas lebar maksimal */
+    margin:auto; /* center ke tengah */
+    background:white; /* warna box */
+    padding:30px; /* jarak isi ke tepi */
+    border-radius:12px; /* sudut membulat */
+    box-shadow:0 5px 15px rgba(0,0,0,0.05); /* bayangan halus */
+}
+
+
+/* ================= LAYOUT ================= */
+
+.checkout-content{
+    display:flex; /* gunakan flexbox */
+    gap:30px; /* jarak antar elemen (form & summary) */
+    margin-top:20px; /* jarak dari atas */
+}
+
+
+/* ================= FORM ================= */
+
+.checkout-form{
+    flex:1; /* ambil sisa ruang (lebih lebar dari summary) */
+}
+
+/* input & select */
+.checkout-form input,
+.checkout-form select{
+    width:100%; /* full lebar */
+    padding:12px; /* ruang dalam */
+    margin-bottom:12px; /* jarak antar input */
+    border:1px solid #ddd; /* garis tipis */
+    border-radius:8px; /* sudut halus */
+    font-size:14px; /* ukuran teks */
+    outline:none; /* hilangkan garis biru default */
+}
+
+/* efek saat klik */
+.checkout-form input:focus,
+.checkout-form select:focus{
+    border-color:#b67a45; /* warna border berubah */
+}
+
+
+/* ================= SUMMARY ================= */
+
+.checkout-summary{
+    width:300px; /* lebar tetap */
+    background:#fafafa; /* warna sedikit abu */
+    padding:20px; /* ruang dalam */
+    border-radius:10px; /* sudut */
+    border:1px solid #eee; /* garis tipis */
+}
+
+/* baris harga */
+.summary-row{
+    display:flex; /* sejajar */
+    justify-content:space-between; /* kiri kanan */
+    margin-bottom:10px; /* jarak bawah */
+}
+
+/* total */
+.summary-total{
+    display:flex; /* sejajar */
+    justify-content:space-between; /* kiri kanan */
+    margin-top:15px; /* jarak atas */
+    padding-top:10px; /* jarak dalam atas */
+    border-top:1px solid #ddd; /* garis pemisah */
+    font-weight:bold; /* teks tebal */
+}
+
+
+/* ================= BUTTON ================= */
+
+.checkout-btn{
+    width:100%; /* full lebar */
+    margin-top:20px; /* jarak dari atas */
+    padding:14px; /* ukuran tombol */
+    background:#b67a45; /* warna utama */
+    color:white; /* teks putih */
+    border:none; /* tanpa border */
+    border-radius:8px; /* sudut */
+    cursor:pointer; /* kursor jadi tangan */
+    transition:0.3s; /* animasi */
+}
+
+/* hover tombol */
+.checkout-btn:hover{
+    background:#9c6438; /* warna lebih gelap */
+    transform:translateY(-2px); /* sedikit naik */
+}

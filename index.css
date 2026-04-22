@@ -1,0 +1,472 @@
+/* ================= HERO ================= */
+
+.hero{
+    height:600px; /* tinggi hero */
+    background:url("gambar/newbgcoffee.jpg") center/cover; /* gambar + posisi + cover */
+    display:flex; /* biar isi bisa ditengah */
+    align-items:center; /* posisi vertikal tengah */
+    position:relative; /* untuk overlay */
+}
+
+.hero-overlay{
+    position:absolute; /* menutupi hero */
+    width:100%; /* full lebar */
+    height:100%; /* full tinggi */
+    background:rgba(0,0,0,0.45); /* efek gelap */
+}
+
+.hero-container{
+    max-width:1100px; /* batas lebar biar tidak terlalu besar */
+    margin:auto; /* center */
+    width:90%; /* responsive */
+    position:relative; /* biar di atas overlay */
+}
+
+.hero-text{
+    color:white; /* warna teks */
+    max-width:500px; /* batas teks */
+}
+
+.hero-text h1{
+    font-size:55px; /* ukuran judul */
+    margin-bottom:20px; /* jarak bawah */
+}
+
+.hero-text p{
+    margin-bottom:25px; /* jarak ke tombol */
+    line-height:1.6; /* tinggi baris */
+}
+
+.hero-btn{
+    background:#b67a45; /* warna tombol */
+    color:white; /* teks putih */
+    padding:12px 25px; /* ukuran tombol */
+    border-radius:6px; /* sudut halus */
+    transition:0.3s; /* animasi */
+}
+
+.hero-btn:hover{
+    background:#8b5e3c; /* warna saat hover */
+}
+
+/* ================= FITUR ================= */
+
+.fitur{
+    padding:80px 5%;
+    background:#f6efe7;
+}
+
+/* container */
+.fitur-container{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* box fitur */
+.fitur-box{
+    background:white;
+    padding:30px 25px;
+    text-align:center;
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s ease;
+}
+
+/* hover efek */
+.fitur-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* icon */
+.fitur-box i{
+    font-size:35px;
+    color:#b67a45;
+    margin-bottom:15px;
+}
+
+/* judul */
+.fitur-box h3{
+    font-size:18px;
+    color:#3d2a1f;
+    margin-bottom:10px;
+}
+
+/* deskripsi */
+.fitur-box p{
+    font-size:14px;
+    color:#7a6a5f;
+    line-height:1.5;
+}
+
+/* ================= PROMO PREMIUM ================= */
+
+.flash-sale{
+    padding:70px 0; /* jarak atas bawah */
+    background:#f8f8f8; /* warna soft */
+    display:flex; /* aktifkan flex */
+    justify-content:center; /* center horizontal */
+}
+
+/* container utama */
+.flash-container{
+    width:100%; /* full */
+    max-width:950px; /* batas biar elegan */
+}
+
+/* ================= HEADER ================= */
+
+.flash-header{
+    display:flex; /* sejajar */
+    justify-content:space-between; /* kiri kanan */
+    align-items:center; /* tengah */
+    margin-bottom:25px; /* jarak ke card */
+}
+
+/* judul */
+.flash-title{
+    display:flex; /* sejajar */
+    align-items:center; /* tengah */
+    gap:10px; /* jarak */
+}
+
+.flash-title h2{
+    font-size:24px; /* ukuran */
+    color:#3d2a1f; /* warna kopi */
+}
+
+/* badge */
+.badge-sale{
+    background:#ee4d2d; /* merah */
+    color:white; /* teks */
+    padding:4px 10px; /* ukuran */
+    border-radius:20px; /* bulat */
+    font-size:12px; /* kecil */
+}
+
+/* ================= TIMER ================= */
+
+.timer-box{
+    background:white; /* box putih */
+    padding:10px 15px; /* ruang */
+    border-radius:10px; /* sudut */
+    box-shadow:0 5px 15px rgba(0,0,0,0.05); /* bayangan */
+    text-align:center; /* tengah */
+}
+
+/* label timer */
+.timer-label{
+    font-size:11px; /* kecil */
+    color:#888; /* abu */
+}
+
+/* isi timer */
+.timer{
+    display:flex; /* sejajar */
+    align-items:center; /* tengah */
+    justify-content:center; /* center */
+    gap:5px; /* jarak */
+    margin-top:5px;
+}
+
+/* angka */
+.time{
+    background:#3d2a1f; /* coklat gelap */
+    color:white; /* teks */
+    padding:5px 8px; /* ukuran */
+    border-radius:5px; /* sudut */
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* ================= SLIDER ================= */
+
+.scroll-x{
+    display:flex; /* horizontal */
+    gap:15px; /* jarak */
+    overflow-x:auto; /* scroll */
+    padding:10px 0;
+
+    scroll-snap-type:x mandatory; /* snap */
+}
+
+.scroll-x::-webkit-scrollbar{
+    display:none; /* hilangkan scrollbar */
+}
+
+/* ================= CARD ================= */
+
+/* ================= FIX PROMO SEJAJAR ================= */
+
+.scroll-x{
+    display:flex; /* bikin semua card berjajar ke samping */
+    flex-wrap:nowrap; /* WAJIB → cegah card turun ke bawah */
+    gap:15px; /* jarak antar card */
+
+    overflow-x:auto; /* aktifkan scroll horizontal */
+    overflow-y:hidden; /* cegah scroll vertikal (biar tidak turun) */
+
+    padding:10px 0; /* jarak atas bawah */
+
+    scroll-snap-type:x mandatory; /* efek berhenti rapi saat scroll */
+}
+
+/* hilangkan scrollbar */
+.scroll-x::-webkit-scrollbar{
+    display:none; /* sembunyikan scrollbar */
+}
+
+/* CARD PROMO */
+.flash-card{
+    flex:0 0 230px; /* KUNCI → lebar card tetap, tidak boleh mengecil / turun */
+    max-width:230px; /* batas maksimal biar stabil */
+
+    background:white; /* warna card */
+    border-radius:15px; /* sudut halus */
+    overflow:hidden; /* potong isi yang keluar */
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.05); /* bayangan halus */
+    transition:0.3s; /* animasi smooth */
+
+    scroll-snap-align:start; /* posisi berhenti tiap card */
+}
+
+/* efek hover */
+.flash-card:hover{
+    transform:translateY(-5px); /* card naik sedikit saat hover */
+}
+
+/* gambar */
+.flash-img{
+    position:relative;
+}
+
+.flash-img img{
+    width:100%;
+    height:160px;
+    object-fit:cover; /* biar bagus */
+}
+
+/* diskon */
+.diskon{
+    position:absolute;
+    top:10px;
+    left:10px;
+
+    background:#ee4d2d;
+    color:white;
+
+    font-size:11px;
+    padding:4px 6px;
+
+    border-radius:5px;
+}
+
+/* isi */
+.flash-body{
+    padding:12px; /* ruang dalam */
+}
+
+/* nama */
+.flash-body h3{
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+/* harga */
+.harga{
+    color:#b67a45;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+/* stok */
+.stok-bar{
+    width:100%;
+    height:5px;
+    background:#eee;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.stok{
+    height:100%;
+    background:#ee4d2d;
+    border-radius:10px;
+}
+
+/* tombol */
+.flash-body button{
+    width:100%;
+    padding:8px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#b67a45;
+    color:white;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.flash-body button:hover{
+    background:#8b5e3c;
+}
+/* ================= PRODUK ================= */
+
+.produk{
+    padding:80px 5%;
+    background:#f6efe7;
+    text-align:center;
+}
+
+/* judul */
+.produk h2{
+    font-size:28px;
+    color:#3d2a1f;
+    margin-bottom:40px;
+}
+
+.produk-container{
+    max-width:1100px;
+    margin:auto;
+
+    display:flex;
+    gap:20px;
+
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding:10px;
+}
+
+/* hilangkan scrollbar */
+.produk-container::-webkit-scrollbar{
+    display:none;
+}
+
+/* biar card tidak mengecil */
+.produk-card{
+    min-width:250px;
+    flex-shrink:0;
+}
+
+/* efek berhenti rapi */
+.produk-container{
+    scroll-snap-type:x mandatory;
+}
+
+.produk-card{
+    scroll-snap-align:start;
+}
+
+/* card */
+.produk-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s ease;
+}
+
+/* hover efek */
+.produk-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* gambar */
+.produk-card img{
+    width:100%;
+    height:200px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+/* nama produk */
+.produk-card h3{
+    font-size:18px;
+    color:#3d2a1f;
+    margin-bottom:8px;
+}
+
+/* harga */
+.produk-card p{
+    color:#b67a45;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* WRAPPER GAMBAR */
+.produk-img{
+    position:relative;
+    width:100%;
+    height:200px;
+    overflow:hidden; /* penting */
+}
+
+
+/* GAMBAR */
+.produk-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover; /* INI KUNCI */
+}
+/* LABEL TOP */
+.label-top{
+    position:absolute;
+    top:10px;
+    left:10px;
+
+    background:#ee4d2d;
+    color:white;
+
+    font-size:12px;
+    font-weight:bold;
+
+    padding:5px 10px;
+
+    /* BENTUK V SHOPEE */
+    clip-path:polygon(0 0,100% 0,100% 75%,50% 100%,0 75%);
+}
+
+/* tombol */
+.produk-card button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+
+    background:#b67a45;
+    color:white;
+    font-weight:600; 
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.produk-card button:hover{
+    background:#8b5e3c;
+    transform:translateY(-2px);
+}
+section:target{
+    animation:slideFade 0.6s ease;
+}
+
+/* animasi geser + fade */
+@keyframes slideFade{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
